@@ -43,3 +43,104 @@ function isDouble(){
 }
 
 console.log("Both dice are the same:", isDouble());
+
+/*
+4. Roll n Dice
+Write a function rollNDice(n) that returns an array of n dice rolls. Each roll should be a number between 1 and 6.
+*/
+
+function rollNDice(n){
+    const rolls = [];
+
+    for (let i=0; i<1; i++){
+
+        diceRoll = Math.floor(Math.random() * 6) + 1;
+        rolls.push(diceRoll);
+    }
+}
+
+
+
+
+
+/*
+5. Count Occurrences
+Write a function countDiceRolls(rolls) that takes an array of numbers (dice rolls) and returns an object showing how many times each number appeared.
+
+// Example input: [2, 4, 6, 2, 1, 4]
+// Output: {1:1, 2:2, 4:2, 6:1}
+
+*/
+
+function countDiceRolls(rolls){
+
+    const counts = {};
+
+    for (let roll in rolls){
+        counts[roll] = (counts[roll] || 0) + 1;
+    }
+    return counts;
+}
+
+
+/*
+6. Dice Game Scoring
+Create a function scoreRolls(rolls) that takes an array of 5 dice rolls and scores them as follows:
+
+5 of a kind: 50 points
+
+4 of a kind: 40 points
+
+3 of a kind: 30 points
+
+A pair: 10 points
+
+Otherwise: 0
+
+*/
+
+
+function scoreRolls(rolls){
+    const counts = {}
+
+    for (let roll of rolls){
+        counts[roll] = (counts[roll] || 0) + 1;
+    }
+
+    const maxCount = Math.max(...Object.values(counts));
+
+    if (maxCount === 5){
+        return 50;
+    }else if (maxCount === 4){
+        return 40
+    }else if (maxCount === 3){
+        return 30
+    }else if (maxCount === 2){
+        return 10
+    }else{
+        return 0
+    }
+
+    
+}
+
+console.log("You have " + scoreRolls([3,4,5,6,3]) + " points");
+
+
+
+
+
+
+/*
+
+*/
+
+
+/*
+
+*/
+
+
+/*
+
+*/
