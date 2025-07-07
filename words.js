@@ -10,7 +10,7 @@ function sumArray(numbers){
     return sum;
 }
 
-console.log("Sum of you numbers is", sumArray([7,8,9,10,24]));
+console.log("Sum of your numbers is", sumArray([7,8,9,10,24]));
 
 /* 2. Count Vowels in a String
 Write a function countVowels(str) that uses a for...of loop to count how many vowels (a, e, i, o, u) are in the string. */
@@ -73,3 +73,62 @@ function addExclamations(words){
 }
 
 console.log("Question 4:", addExclamations(["How exciting", "Wow", "Fantastic"]));
+
+/*5. Filter Even Numbers
+Write a function getEvenNumbers(numbers) that uses a for...of loop to return an array of only the even numbers. */
+
+function getEvenNumbers(numbers){
+
+    let even = [];
+
+    for (let num of numbers){
+        if(num % 2 == 0){
+            even.push(num);
+        }else{
+            even;
+        }
+    }
+
+    return even;
+
+
+}
+
+console.log("Question 5: Number of even numbers is", getEvenNumbers([45,64,72,50,23]));
+
+
+
+/*6. Reverse All Strings
+Write a function reverseStrings(strings) that returns a new array where each string from the input array is reversed.*/
+
+function reverseStrings(strings){
+
+    let reversed = [];
+
+    for(let str of strings){
+        reversed.push(str.split("").reverse().join(""));
+
+    }
+
+    return reversed;
+
+}
+
+console.log("Question 6:", reverseStrings(["chocolate", "hannah", "boat", "ship"]))
+
+
+
+/*7. Letter Frequencies
+Write a function letterFrequencies(word) that returns an object showing how many times each letter appears in the word.*/
+
+function letterFrequencies(word){
+    const count = {};
+
+    for (let letter of word){
+        count[letter] = (count[letter] || 0) + 1;
+    }
+
+    return count;
+}
+
+console.log(letterFrequencies("banana"));
