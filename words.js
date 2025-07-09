@@ -131,4 +131,31 @@ function letterFrequencies(word){
     return count;
 }
 
-console.log(letterFrequencies("banana"));
+console.log("Question 7:", (letterFrequencies("banana")));
+
+/*8. FizzBuzz
+Write a function that loops from 1 to 20. For each number:
+
+If divisible by 3, print "Fizz"
+
+If divisible by 5, print "Buzz"
+
+If divisible by both, print "FizzBuzz"
+
+Otherwise, print the number */
+
+function FizzBuzz() {
+    for (let i = 1; i <= 20; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log("FizzBuzz");
+        } else if (i % 3 === 0) {
+            console.log("Fizz");
+        } else if (i % 5 === 0) {
+            console.log("Buzz");
+        } else {
+            console.log(i);
+        }
+    }
+}
+
+FizzBuzz();
