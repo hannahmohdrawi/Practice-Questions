@@ -159,3 +159,37 @@ function FizzBuzz() {
 }
 
 FizzBuzz();
+
+/*9.Multiply Each Number
+Write a function that takes an array of numbers and returns a new array with each number multiplied by 2.*/
+
+function multiplyByTwo(array){
+
+    let multiplied = [];
+
+    for(let num of array){
+        multiplied.push(num*2)
+    }
+    return multiplied
+}
+
+
+console.log(multiplyByTwo([1, 2, 3]));
+
+
+/*10.Count Letters
+Write a function that counts how many times the letter "a" appears in a given string. */
+
+function countAs(str){
+
+    let count = 0;
+
+    for(let letter of str){
+        if(letter === "a"){
+            count += 1;
+        }
+    }
+    return count
+}
+
+console.log(countAs("apples are amazing"));
