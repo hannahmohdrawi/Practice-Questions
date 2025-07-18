@@ -26,25 +26,33 @@ const library = [
 ];
 
 
-class library{
-    constructor(title, author, availability){
-        this.title = title;
-        this.author = author;
-        this.availbility = availability;
-    }
-
-    borrowBook(){
-        this.availbility = true;
-    }
-
-    returnBook(){
-        this.availbility = false;
-    }
-
-    searchBooks(){
-
-    }
+function borrowBook(title){
+  const book = library.find(book => book.title === title);
+  if (book && !book.available){
+    book.available = false;
+    console.log(`You borrowed ${book.title}`);
+  }else{
+    console.log(`${book.title} canot be borrowed sorry!`)
+  }
 }
+
+function returnBook(title){
+  const book = library.find(book => book.title === title);
+  if(book.title && book.available){
+    book.available = true;
+    console.log(`${book.title} has been returned`)
+  }else{
+    console.log(`${book.title} was not borrowed`)
+  }
+}
+
+function getAvailableBooks(title){
+ return library.filter(book => book.available)
+}
+
+
+
+
 
 
 /* Challenge 2: Todo List with Filters

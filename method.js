@@ -49,9 +49,6 @@ console.log(totalSum(cart));
 
 
 
-
-
-
 /*Challenge 3: Library Filter
 Given this library:
 
